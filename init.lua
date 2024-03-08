@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "airblade/vim-gitgutter",
+  "bronson/vim-trailing-whitespace",
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
