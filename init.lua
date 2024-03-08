@@ -13,7 +13,9 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   "nvim-tree/nvim-tree.lua",
-  "nvim-tree/nvim-web-devicons"
+  "nvim-tree/nvim-web-devicons",
+  "nvim-treesitter/nvim-treesitter",
+  "RRethy/nvim-treesitter-endwise"
 })
 
 -- nvim-tree.lua
@@ -28,3 +30,16 @@ require("nvim-tree").setup({
 
 vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>")
 --
+
+-- nvim-treesitter
+require('nvim-treesitter.configs').setup({
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true
+  },
+  endwise = {
+    enable = true
+  }
+})
