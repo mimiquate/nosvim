@@ -13,6 +13,30 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      local builtin = require('telescope.builtin')
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+      vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+      vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+      vim.keymap.set('n', '<C-p>', builtin.find_files, {})
+      vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
+      vim.keymap.set('n', '<C-b>', builtin.buffers, {})
+
+      require('telescope').setup({
+        pickers = {
+          buffers = {
+            ignore_current_buffer = true,
+            sort_mru = true,
+          }
+        }
+      })
+    end
+  },
+  {
     "nvim-tree/nvim-tree.lua",
     config = function()
       vim.g.loaded_netrw = 1
