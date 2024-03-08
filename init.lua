@@ -11,4 +11,20 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({})
+require("lazy").setup({
+  "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons"
+})
+
+-- nvim-tree.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+require("nvim-tree").setup({
+  filters = {
+    git_ignored = false,
+  },
+})
+
+vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>")
+--
