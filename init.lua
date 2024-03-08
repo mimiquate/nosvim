@@ -70,3 +70,5 @@ require("lazy").setup({
   },
   "RRethy/nvim-treesitter-endwise"
 })
+
+vim.opt.clipboard="unnamedplus"
