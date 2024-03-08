@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  "airblade/vim-gitgutter",
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
@@ -68,7 +69,8 @@ require("lazy").setup({
       })
     end
   },
-  "RRethy/nvim-treesitter-endwise"
+  "RRethy/nvim-treesitter-endwise",
+  "tpope/vim-fugitive",
 })
 
 vim.opt.clipboard="unnamedplus"
