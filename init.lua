@@ -71,6 +71,7 @@ require("lazy").setup({
   },
   "RRethy/nvim-treesitter-endwise",
   "tpope/vim-fugitive",
+  "tpope/vim-rhubarb",
 })
 
 vim.opt.clipboard="unnamedplus"
