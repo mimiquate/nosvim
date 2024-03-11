@@ -96,6 +96,7 @@ require("lazy").setup({
   "tpope/vim-rhubarb",
   {
     "tpope/vim-unimpaired",
+    lazy = false,
     keys = {
       {'<C-Up>', '[e', remap = true},
       {'<C-Down>', ']e', remap = true},
