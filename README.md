@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-* [Neovim](https://neovim.io/) 0.9.0+
+* [Neovim](https://neovim.io/) 0.9.2+
 
 ## Installation
 
