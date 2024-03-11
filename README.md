@@ -11,6 +11,24 @@
 $ git clone https://github.com/mimiquate/nosvim ~/.config/nvim
 ```
 
+## Check nvim installation health
+
+```
+# inside nvim
+:checkhealth()
+```
+
+## Install support for languages
+
+Using nvim-treesitter commands
+
+```
+# inside nvim
+:TSInstall <language_to_install>
+```
+
+More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#language-parsers
+
 ## License
 
    Copyright 2024 Mimiquate
