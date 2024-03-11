@@ -85,6 +85,15 @@ require("lazy").setup({
   "RRethy/nvim-treesitter-endwise",
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
+  {
+    "tpope/vim-unimpaired",
+    keys = {
+      {'<C-Up>', '[e'},
+      {'<C-Down>', ']e'},
+      {'<C-Up>', '[egv', mode = 'v'},
+      {'<C-Down>', ']egv', mode = 'v'}
+    }
+  }
 })
 
 vim.opt.clipboard="unnamedplus"
