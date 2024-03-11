@@ -84,6 +84,14 @@ require("lazy").setup({
     end
   },
   "RRethy/nvim-treesitter-endwise",
+  {
+    "tpope/vim-commentary",
+    keys = {
+      -- nerdcommenter mappings
+      {'<leader>c<space>', 'gcc', remap = true},
+      {'<leader>c<space>', 'gc', mode = 'v', remap = true}
+    }
+  },
   "tpope/vim-fugitive",
   "tpope/vim-rhubarb",
   {
