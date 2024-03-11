@@ -15,6 +15,18 @@ require("lazy").setup({
   "airblade/vim-gitgutter",
   "bronson/vim-trailing-whitespace",
   {
+    "folke/tokyonight.nvim",
+    config = function()
+      require('tokyonight').setup({
+        transparent = true,
+        styles = {
+          floats = "transparent",
+          sidebars = "transparent"
+        }
+      })
+    end
+  },
+  {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' },
@@ -84,3 +96,5 @@ vim.opt.shiftwidth=2
 vim.opt.number=true
 
 vim.opt.iskeyword:append('-')
+
+vim.cmd[[colorscheme tokyonight-night]]
