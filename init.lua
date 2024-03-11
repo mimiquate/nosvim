@@ -92,7 +92,12 @@ require("lazy").setup({
       {'<leader>c<space>', 'gc', mode = 'v', remap = true}
     }
   },
-  "tpope/vim-fugitive",
+  {
+    "tpope/vim-fugitive",
+    keys = {
+      {'<C-\\>', '<cmd>Ggrep <cword><enter>', remap = true}
+    }
+  },
   "tpope/vim-rhubarb",
   {
     "tpope/vim-unimpaired",
