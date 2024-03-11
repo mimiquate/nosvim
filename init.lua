@@ -52,6 +52,9 @@ require("lazy").setup({
   },
   {
     "nvim-tree/nvim-tree.lua",
+    keys = {
+      {'<C-n>', '<Cmd>NvimTreeToggle<CR>'}
+    },
     config = function()
       vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
@@ -61,8 +64,6 @@ require("lazy").setup({
           git_ignored = false,
         },
       })
-
-      vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeToggle<CR>")
     end
   },
   "nvim-tree/nvim-web-devicons",
