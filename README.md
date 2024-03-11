@@ -29,6 +29,11 @@ Using nvim-treesitter commands
 
 More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#language-parsers
 
+## Extra customizations
+
+Extra customizations and/or overrides can be placed under `~/.nvim.lua`, which will be loaded
+automatically if present.
+
 ## License
 
    Copyright 2024 Mimiquate
