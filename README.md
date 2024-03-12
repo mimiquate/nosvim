@@ -13,7 +13,11 @@ Light and decent neovim experience
 
 ## Installation
 
-```
+```sh
+# 0. Backup step in case any existing nvim config
+$ mv ~/.config/nvim ~/.config/nvim-backup
+
+# 1. Clone nosvim
 $ git clone https://github.com/mimiquate/nosvim ~/.config/nvim
 ```
 
