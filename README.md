@@ -21,6 +21,13 @@ $ mv ~/.config/nvim ~/.config/nvim-backup
 $ git clone https://github.com/mimiquate/nosvim ~/.config/nvim
 ```
 
+## Update
+
+```sh
+$ cd ~/.config/nvim
+$ git pull
+```
+
 ## Features
 
 - Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
