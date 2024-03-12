@@ -19,6 +19,9 @@ $ mv ~/.config/nvim ~/.config/nvim-backup
 
 # 1. Clone nosvim
 $ git clone https://github.com/mimiquate/nosvim ~/.config/nvim
+
+# 2. Open neovim and wait for plugins to be installed
+$ nvim
 ```
 
 ## Update
