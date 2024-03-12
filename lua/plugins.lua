@@ -3,15 +3,13 @@ return {
   "bronson/vim-trailing-whitespace",
   {
     "folke/tokyonight.nvim",
-    config = function()
-      require('tokyonight').setup({
-        transparent = true,
-        styles = {
-          floats = "transparent",
-          sidebars = "transparent"
-        }
-      })
-    end
+    opts = {
+      transparent = true,
+      styles = {
+        floats = "transparent",
+        sidebars = "transparent"
+      }
+    }
   },
   {
     'nvim-telescope/telescope.nvim',
@@ -56,19 +54,18 @@ return {
   "nvim-tree/nvim-web-devicons",
   {
     "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require('nvim-treesitter.configs').setup({
-        highlight = {
-          enable = true,
-        },
-        indent = {
-          enable = true
-        },
-        endwise = {
-          enable = true
-        }
-      })
-    end
+    main = "nvim-treesitter.configs",
+    opts = {
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true
+      },
+      endwise = {
+        enable = true
+      }
+    }
   },
   "RRethy/nvim-treesitter-endwise",
   {
