@@ -65,6 +65,14 @@ More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-f
 Extra customizations and/or overrides can be placed under `~/.nvim.lua`, which will be loaded
 automatically if present.
 
+### Plugins
+
+To add a new plugin, you need to add a new file under `~/.config/nvim/lua/plugins/` according to
+lazy.nvim plugins spec specification.
+
+See other existing files under that directory for examples on how to configure.
+
+
 ## License
 
    Copyright 2024 Mimiquate
