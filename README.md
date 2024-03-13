@@ -1,6 +1,19 @@
 # :feather: nosvim
 
-Light and decent neovim experience
+Light and productive.
+
+A very thin config layer for neovim.
+
+### Main features
+
+- Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- Programming languages support with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- File explorer with [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
+- Git integration with [vim-fugitive](https://github.com/tpope/vim-fugitive) and [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- GitHub integration with [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
+- Easily comment code with [vim-commentary](https://github.com/tpope/vim-commentary)
+- Easily navigate quickfix with [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
+- Dev icons with [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) (needs a [patched font](https://github.com/nvim-tree/nvim-web-devicons?tab=readme-ov-file#requirements) installed)
 
 ## Prerequisites
 
@@ -30,17 +43,6 @@ $ nvim
 $ cd ~/.config/nvim
 $ git pull
 ```
-
-## Features
-
-- Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- Programming languages support with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- File explorer with [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
-- Git integration with [vim-fugitive](https://github.com/tpope/vim-fugitive) and [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
-- GitHub integration with [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
-- Easily comment code with [vim-commentary](https://github.com/tpope/vim-commentary)
-- Easily navigate quickfix with [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
-- Dev icons with [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) (needs a [patched font](https://github.com/nvim-tree/nvim-web-devicons?tab=readme-ov-file#requirements) installed)
 
 ## Install support for programming languages
 
