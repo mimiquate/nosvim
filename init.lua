@@ -10,7 +10,7 @@ vim.opt.number=true
 
 vim.opt.iskeyword:append('-')
 
-vim.cmd[[colorscheme tokyonight-night]]
+vim.cmd[[colorscheme onedark]]
 
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
   vim.cmd("source ~/.nvim.lua")
