@@ -7,7 +7,9 @@ A very thin config layer for neovim.
 ### Main features
 
 - Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- Programming languages support with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Syntax highlighting of any language with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Autocompletions with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- LSP integration with [mason.nvim](https://github.com/williamboman/mason.nvim) and [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - File explorer with [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - Git integration with [vim-fugitive](https://github.com/tpope/vim-fugitive) and [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - GitHub integration with [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
