@@ -4,5 +4,5 @@ return {
   "bronson/vim-trailing-whitespace",
   "nvim-tree/nvim-web-devicons",
   "RRethy/nvim-treesitter-endwise",
-  "tpope/vim-rhubarb",
+  {"tpope/vim-rhubarb", dependencies = { "tpope/vim-fugitive" }}
 }
