@@ -1,4 +1,4 @@
--- The below table will be merged with the rest of the plugin specs under `/lua/plugins/`
+-- The below table will be merged with the rest of the plugin specs under `/lua/plugins/*.lua`
 return {
   "airblade/vim-gitgutter",
   "bronson/vim-trailing-whitespace",
