@@ -15,6 +15,19 @@ return {
       function(server_name) -- default handler (optional)
         require("lspconfig")[server_name].setup({})
       end,
+      -- Next, you can provide a dedicated handler for specific servers.
+      -- For example, a handler override for the `rust_analyzer`:
+      ["lua_ls"] = function ()
+        require("lspconfig").lua_ls.setup({
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = {'vim'}
+              }
+            }
+          }
+        })
+      end
     }
 
     -- Use LspAttach autocommand to only map the following keys
