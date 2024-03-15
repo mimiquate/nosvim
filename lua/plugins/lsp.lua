@@ -58,5 +58,24 @@ return {
     -- We may consider enable but with some defer solution like https://github.com/yorickpeterse/nvim-dd
     -- so it is less noisy.
     vim.diagnostic.disable()
+
+    -- Configures LSP hover window
+    local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+    function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+      opts = opts or {}
+      opts.max_height = opts.max_height or 30
+      opts.max_width = opts.max_width or 120
+      opts.border = opts.border or {
+        {"🭽", "FloatBorder"},
+        {"▔", "FloatBorder"},
+        {"🭾", "FloatBorder"},
+        {"▕", "FloatBorder"},
+        {"🭿", "FloatBorder"},
+        {"▁", "FloatBorder"},
+        {"🭼", "FloatBorder"},
+        {"▏", "FloatBorder"},
+      }
+      return orig_util_open_floating_preview(contents, syntax, opts, ...)
+    end
   end
 }
