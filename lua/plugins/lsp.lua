@@ -53,24 +53,9 @@ return {
       }
     )
 
-    -- Workaround to only show diagnostics after saving buffer
-    -- https://github.com/neovim/neovim/issues/13324#issuecomment-1592038788
-    vim.api.nvim_create_autocmd(
-      {"BufNew", "InsertEnter"},
-      {
-        callback = function(args)
-          vim.diagnostic.disable(args.buf)
-        end
-      }
-    )
-
-    vim.api.nvim_create_autocmd(
-      {"BufWrite"},
-      {
-        callback = function(args)
-          vim.diagnostic.enable(args.buf)
-        end
-      }
-    )
+    -- Disable LSP diagnostics for now. They seem a bit immature for now.
+    -- We may consider enable but with some defer solution like https://github.com/yorickpeterse/nvim-dd
+    -- so it is less noisy.
+    vim.diagnostic.disable()
   end
 }
