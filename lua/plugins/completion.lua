@@ -3,22 +3,14 @@ return {
   dependencies = {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-vsnip',
-    'hrsh7th/vim-vsnip',
-    "neovim/nvim-lspconfig",
-    'rafamadriz/friendly-snippets'
+    "neovim/nvim-lspconfig"
   },
   config = function()
     local cmp = require('cmp')
 
     cmp.setup({
       completion = {
-        keyword_length = 3
-      },
-      snippet = {
-        expand = function(args)
-          vim.fn["vsnip#anonymous"](args.body)
-        end,
+        keyword_length = 2
       },
       mapping = cmp.mapping.preset.insert({
         ['<C-e>'] = cmp.mapping.abort(),
@@ -27,7 +19,6 @@ return {
       sources = cmp.config.sources(
         {
           { name = 'nvim_lsp' },
-          { name = 'vsnip' },
           { name = 'buffer' },
         }
       )
