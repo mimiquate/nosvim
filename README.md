@@ -46,16 +46,42 @@ $ cd ~/.config/nvim
 $ git pull
 ```
 
-## Install support for programming languages
+## Support for programming languages
 
-Using nvim-treesitter commands
+### Syntax highlighting
+
+Using nvim-treesitter commands:
 
 ```
 # inside nvim
+
 :TSInstall <language_to_install>
 ```
 
-More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#language-parsers
+More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#language-parsers.
+
+### Autocompletion and LSP
+
+Using mason-nvim commands:
+
+```
+# inside nvim
+
+:MasonInstall <language_to_install>
+```
+
+or
+
+```
+# inside nvim
+
+:Mason
+```
+
+to open the interactive mason window.
+
+More details: https://github.com/williamboman/mason.nvim?tab=readme-ov-file#commands.
+
 
 ## Check installation health
 
