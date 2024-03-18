@@ -1,6 +1,6 @@
 return {
   "tpope/vim-fugitive",
-  lazy = false,
+  event = "VeryLazy",
   keys = {
     {'<C-\\>', '<cmd>Ggrep <cword><enter>', remap = true}
   }

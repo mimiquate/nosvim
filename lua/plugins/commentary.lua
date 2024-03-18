@@ -1,6 +1,6 @@
 return {
   "tpope/vim-commentary",
-  lazy = false,
+  event = "VeryLazy",
   keys = {
     -- nerdcommenter mappings
     {'<leader>c<space>', 'gcc', remap = true},

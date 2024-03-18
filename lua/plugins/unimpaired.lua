@@ -1,6 +1,6 @@
 return {
   "tpope/vim-unimpaired",
-  lazy = false,
+  event = "VeryLazy",
   keys = {
     {'<C-Up>', '[e', remap = true},
     {'<C-Down>', ']e', remap = true},
