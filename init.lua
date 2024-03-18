@@ -10,6 +10,4 @@ vim.opt.number=true
 
 vim.opt.iskeyword:append('-')
 
-if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
-  vim.cmd("source ~/.nvim.lua")
-end
+require("custom")
