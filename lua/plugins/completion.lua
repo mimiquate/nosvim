@@ -5,6 +5,7 @@ return {
     'hrsh7th/cmp-nvim-lsp',
     "neovim/nvim-lspconfig"
   },
+  event = "VeryLazy",
   config = function()
     local cmp = require('cmp')
 
