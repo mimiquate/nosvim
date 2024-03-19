@@ -1,7 +1,7 @@
 return {
   "tpope/vim-fugitive",
   event = "VeryLazy",
-  keys = {
-    {'<C-\\>', '<cmd>Ggrep <cword><enter>', remap = true}
-  }
+  config = function()
+    vim.keymap.set("n", "<C-\\>", "<cmd>Ggrep <cword><enter>", { remap = true })
+  end
 }

@@ -1,9 +1,9 @@
 return {
   "tpope/vim-commentary",
   event = "VeryLazy",
-  keys = {
+  config = function()
     -- nerdcommenter mappings
-    {'<leader>c<space>', 'gcc', remap = true},
-    {'<leader>c<space>', 'gc', mode = 'v', remap = true}
-  }
+    vim.keymap.set("n", "<leader>c<space>", "gcc", { remap = true })
+    vim.keymap.set("v", "<leader>c<space>", "gc", { remap = true })
+  end
 }
