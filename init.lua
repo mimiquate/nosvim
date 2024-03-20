@@ -8,6 +8,8 @@ vim.opt.shiftwidth=2
 
 vim.opt.number=true
 
+vim.opt.hlsearch=false
+
 -- Avoids text flicker when gitgutter writes signs to the signcolumn by letting
 -- it be always open.
 vim.opt.signcolumn="yes"
