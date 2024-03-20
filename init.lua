@@ -8,6 +8,10 @@ vim.opt.shiftwidth=2
 
 vim.opt.number=true
 
+-- Avoids text flicker when gitgutter writes signs to the signcolumn by letting
+-- it be always open.
+vim.opt.signcolumn="yes"
+
 vim.opt.iskeyword:append('-')
 
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
