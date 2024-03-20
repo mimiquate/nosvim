@@ -8,7 +8,7 @@ return {
     require("mason").setup()
     require("mason-lspconfig").setup()
 
-    require("mason-lspconfig").setup_handlers {
+    require("mason-lspconfig").setup_handlers({
       -- The first entry (without a key) will be the default handler
       -- and will be called for each installed server that doesn't have
       -- a dedicated handler.
@@ -17,7 +17,7 @@ return {
       end,
       -- Next, you can provide a dedicated handler for specific servers.
       -- For example, a handler override for the `rust_analyzer`:
-      ["lua_ls"] = function ()
+      ["lua_ls"] = function()
         require("lspconfig").lua_ls.setup({
           settings = {
             Lua = {
@@ -28,7 +28,7 @@ return {
           }
         })
       end
-    }
+    })
 
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer
@@ -46,7 +46,7 @@ return {
             'n',
             '<space>f',
             function()
-              vim.lsp.buf.format { async = true }
+              vim.lsp.buf.format({ async = true })
             end,
             opts
           )
