@@ -54,10 +54,17 @@ return {
       }
     )
 
-    -- Disable LSP diagnostics for now. They seem a bit immature for now.
-    -- We may consider enable but with some defer solution like https://github.com/yorickpeterse/nvim-dd
-    -- so it is less noisy.
-    vim.diagnostic.disable()
+    -- Reduce diagnostics noise by only keeping signcolumn signs enabled.
+    -- vim.diagnostic.open_float keymap below can be used to show more details.
+    vim.diagnostic.config({
+      signs = true,
+      underline = false,
+      virtual_text = false
+    })
+    vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
+    vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
     -- Configures LSP hover window
     local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
