@@ -11,7 +11,9 @@ return {
 
     cmp.setup({
       completion = {
-        keyword_length = 2
+        -- Can be quite distracting if enabled.
+        -- Manual completion via <C-n> possible.
+        autocomplete = false
       },
       mapping = cmp.mapping.preset.insert({
         ['<C-e>'] = cmp.mapping.abort(),
