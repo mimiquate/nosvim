@@ -40,16 +40,26 @@ return {
           -- Buffer local mappings.
           -- See `:help vim.lsp.*` for documentation on any of the below functions
           local opts = { buffer = args.buf }
-          vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-          vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-          vim.keymap.set(
-            'n',
-            '<space>f',
-            function()
-              vim.lsp.buf.format({ async = true })
-            end,
-            opts
-          )
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+          if client.server_capabilities.definitionProvider then
+            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+          end
+
+          if client.server_capabilities.hoverProvider then
+            vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+          end
+
+          if client.server_capabilities.documentFormattingProvider then
+            vim.keymap.set(
+              'n',
+              '<space>f',
+              function()
+                vim.lsp.buf.format({ async = true })
+              end,
+              opts
+            )
+          end
         end
       }
     )
