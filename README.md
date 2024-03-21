@@ -44,12 +44,15 @@ More details on https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-f
 # 0. Backup step in case any existing nvim config
 $ mv ~/.config/nvim ~/.config/nvim-backup
 
-# 1. Clone nosvim
+# 1. Clone nosvim config files into your system nvim config root
 $ git clone https://github.com/mimiquate/nosvim ~/.config/nvim
 
-# 2. Open neovim and wait for plugins to be installed
+# 2. Open neovim and wait for lazy.nvim plugin manager to install plugins
 $ nvim
 ```
+
+You can, at any time, manually type :Lazy to open lazy.nvim dashboard on demand
+if necessary.
 
 ## Update
 
