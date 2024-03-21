@@ -22,7 +22,7 @@ virtual text.
 - GitHub integration with [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
 - Easily comment code with [vim-commentary](https://github.com/tpope/vim-commentary)
 - Easily navigate quickfix with [vim-unimpaired](https://github.com/tpope/vim-unimpaired)
-- Dev icons with [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) (needs a [patched font](https://github.com/nvim-tree/nvim-web-devicons?tab=readme-ov-file#requirements) installed)
+- Dev icons with [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) (needs a [patched font](#to-make-dev-icons-work) installed)
 
 ## Prerequisites
 
@@ -31,12 +31,22 @@ virtual text.
 
 ### Suggested and optional dependencies
 
-To improve telescope.nvim finding and filtering experience:
+#### To improve telescope.nvim finding and filtering experience:
 
 * [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
 * [fd](https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu)
 
 More details on https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#suggested-dependencies
+
+#### To make dev icons work:
+
+* A [patched font](https://github.com/nvim-tree/nvim-web-devicons?tab=readme-ov-file#requirements)
+
+##### What is a patched font in this context?
+
+A font that has been patched/extended with icons.
+
+Great [video intro](https://www.youtube.com/watch?v=fR4ThXzhQYI) to Nerd Fonts by `chris@machine`.
 
 ## Installation
 
