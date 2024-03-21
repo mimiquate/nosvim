@@ -20,9 +20,14 @@ A very thin config layer for neovim.
 * [Neovim](https://neovim.io/) 0.9.2+
 * tree-sitter-cli
 
-### Optional
+### Suggested and optional dependencies
+
+To improve telescope.nvim finding and filtering experience:
 
 * [ripgrep](https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation)
+* [fd](https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu)
+
+More details on https://github.com/nvim-telescope/telescope.nvim?tab=readme-ov-file#suggested-dependencies
 
 ## Installation
 
