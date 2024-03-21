@@ -73,6 +73,20 @@ $ cd ~/.config/nvim
 $ git pull
 ```
 
+## Keymaps
+
+We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
+
+| Keymap             | Mode(s)        | Description            | Notes |
+| ------             | -----          | -----                  | ----- |
+| `<C-n>`            | normal         | Open/Close File Tree   | Same as `:NvimTreeToggle` |
+| `<C-p>`            | normal         | Find files             | Same as `:Telescope find_files` |
+| `<C-b>`            | normal         | Find buffers           | Same as `:Telescope buffers` |
+| `<C-g>`            | normal         | Grep files             | Same as `:Telescope live_grep` |
+| `<C-Up>`           | normal, visual | Move line(s) up        | |
+| `<C-Down>`         | normal, visual | Move line(s) down      | |
+| `<Leader>c<Space>` | normal, visual | Comment/Uncomment code | |
+
 ## Support for programming languages
 
 ### Syntax highlighting
