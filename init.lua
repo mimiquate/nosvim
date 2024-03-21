@@ -16,6 +16,10 @@ vim.opt.signcolumn="yes"
 
 vim.opt.iskeyword:append('-')
 
+-- Retain undo history to be able to undo changes even after closing and
+-- reopening file buffer.
+vim.opt.undofile = true
+
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
   vim.cmd("source ~/.nvim.lua")
 end
