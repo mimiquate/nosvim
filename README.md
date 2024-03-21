@@ -4,6 +4,15 @@ Light and productive.
 
 A very thin config layer for neovim.
 
+### Motivation
+
+Provide **minimal** defaults that enhance the native neovim experience significantly without too much
+bloat.
+
+Special care taken to **avoid** potentially **noisy** and **distracting** features. This means intentionally not included
+popular features in other configs like gitsigns blame virtual text like gitsigns, or LSP error/warning diagnostics
+virtual text.
+
 ### Main features
 
 - Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
