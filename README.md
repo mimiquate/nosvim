@@ -75,15 +75,15 @@ $ git pull
 
 We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 
-| Keymap             | Mode(s)        | Description            | Notes |
-| ------             | -----          | -----                  | ----- |
-| `<C-n>`            | normal         | Open/Close File Tree   | Same as `:NvimTreeToggle` |
-| `<C-p>`            | normal         | Find files             | Same as `:Telescope find_files` |
-| `<C-b>`            | normal         | Find buffers           | Same as `:Telescope buffers` |
-| `<C-g>`            | normal         | Grep files             | Same as `:Telescope live_grep` |
-| `<C-Up>`           | normal, visual | Move line(s) up        | |
-| `<C-Down>`         | normal, visual | Move line(s) down      | |
-| `<Leader>c<Space>` | normal, visual | Comment/Uncomment code | |
+| Mode(s)        | Keymap             | Description            | Notes |
+| -----          | ------             | -----                  | ----- |
+| normal         | `<C-n>`            | Open/Close File Tree   | Same as `:NvimTreeToggle` |
+| normal         | `<C-p>`            | Find files             | Same as `:Telescope find_files` |
+| normal         | `<C-b>`            | Find buffers           | Same as `:Telescope buffers` |
+| normal         | `<C-g>`            | Grep files             | Same as `:Telescope live_grep` |
+| normal, visual | `<C-Up>`           | Move line(s) up        | |
+| normal, visual | `<C-Down>`         | Move line(s) down      | |
+| normal, visual | `<Leader>c<Space>` | Comment/Uncomment code | |
 
 ## Install support for programming languages
 
