@@ -81,9 +81,13 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 | `<C-p>`            | normal         | Find files             | Same as `:Telescope find_files` |
 | `<C-b>`            | normal         | Find buffers           | Same as `:Telescope buffers` |
 | `<C-g>`            | normal         | Grep files             | Same as `:Telescope live_grep` |
-| `<C-Up>`           | normal, visual | Move line(s) up        | |
-| `<C-Down>`         | normal, visual | Move line(s) down      | |
+| `K`                | normal, visual | Move line(s) up        | |
+| `J`                | normal, visual | Move line(s) down      | |
 | `<Leader>c<Space>` | normal, visual | Comment/Uncomment code | |
+| `<C-h>`            | normal         | Move cursor to left windows | |
+| `<C-j>`            | normal         | Move cursor to windows below | |
+| `<C-k>`            | normal         | Move cursor to windows above | |
+| `<C-l>`            | normal         | Move cursor right windows | |
 
 ## Install support for programming languages
 
