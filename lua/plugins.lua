@@ -20,5 +20,9 @@ return {
     "tpope/vim-rhubarb",
     event = "VeryLazy",
     dependencies = { "tpope/vim-fugitive" }
+  },
+  {
+    "tpope/vim-unimpaired",
+    event = "VeryLazy",
   }
 }

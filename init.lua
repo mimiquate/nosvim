@@ -1,4 +1,5 @@
 require("plugin_manager")
+require("keymaps")
 
 vim.opt.clipboard="unnamedplus"
 
