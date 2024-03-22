@@ -52,7 +52,7 @@ return {
 
           if client.server_capabilities.documentFormattingProvider then
             vim.keymap.set(
-              'n',
+              {'n', 'v'},
               '<space>f',
               function()
                 vim.lsp.buf.format({ async = true })

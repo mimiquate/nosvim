@@ -85,7 +85,7 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 | normal           | `<C-g>`            | **Search** for a **string** and get results live as you type (respects .gitignore) | `:Telescope live_grep` |
 | normal           | `gd`               | Go **to** the **definition** of the symbol under the cursor | `:vim.lsp.buf.definition` |
 | normal           | `K`                | Displays **hover information** about the symbol under the cursor in a floating window.<br>Calling the function twice will jump into the floating window. | `:vim.lsp.buf.hover` |
-| normal           | `<Space>f`         | **Formats** a buffer using the attached language server clients | `:vim.lsp.buf.format({ async = true })` |
+| normal<br>visual | `<Space>f`         | **Formats** a buffer (or visual selection) using the attached language server clients | `:vim.lsp.buf.format({ async = true })` |
 | normal           | `<Space>e`         | **Show diagnostics** in a floating window | `:vim.diagnostic.open_float` |
 | normal           | `]d`               | Move to the **next diagnostic** | `:vim.diagnostic.goto_next` |
 | normal           | `[d`               | Move to the **previous diagnostic** | `:vim.diagnostic.goto_prev` |
