@@ -86,6 +86,13 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 | normal, visual | `<C-Up>`           | Move line(s) up | |
 | normal, visual | `<C-Down>`         | Move line(s) down | |
 | normal, visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc` |
+| normal         | `gd`               | Go **to** the **definition** of the symbol under the cursor | `:vim.lsp.buf.definition` |
+| normal         | `K`                | Displays **hover information** about the symbol under the cursor in a floating window. Calling the function twice will jump into the floating window. | `:vim.lsp.buf.hover` |
+| normal         | `<Space>f`         | **Formats** a buffer using the attached language server clients | `:vim.lsp.buf.format({ async = true })` |
+| normal         | `<Space>e`         | **Show diagnostics** in a floating window | `:vim.diagnostic.open_float` |
+| normal         | `]d`               | Move to the **next diagnostic** | `:vim.diagnostic.goto_next` |
+| normal         | `[d`               | Move to the **previous diagnostic** | `:vim.diagnostic.goto_prev` |
+| insert         | `<C-n>`            | Invoke **completion** | `:cmp.complete` |
 
 ## Support for programming languages
 

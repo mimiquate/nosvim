@@ -74,7 +74,6 @@ return {
     vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
-    vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist)
 
     -- Configures LSP hover window
     local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
