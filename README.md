@@ -77,13 +77,13 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 
 | Mode(s)        | Keymap             | Description            | Notes |
 | -----          | ------             | -----                  | ----- |
-| normal         | `<C-n>`            | Open/Close File Tree   | Same as `:NvimTreeToggle` |
-| normal         | `<C-p>`            | Find files             | Same as `:Telescope find_files` |
-| normal         | `<C-b>`            | Find buffers           | Same as `:Telescope buffers` |
-| normal         | `<C-g>`            | Grep files             | Same as `:Telescope live_grep` |
-| normal, visual | `<C-Up>`           | Move line(s) up        | |
-| normal, visual | `<C-Down>`         | Move line(s) down      | |
-| normal, visual | `<Leader>c<Space>` | Comment/Uncomment code | |
+| normal         | `<C-n>`            | **Open** or close the **file tree** | `:NvimTreeToggle` |
+| normal         | `<C-p>`            | **Search** for **files** (respecting .gitignore) | `:Telescope find_files` |
+| normal         | `<C-b>`            | **Lists** open **buffers** in current neovim instance | `:Telescope buffers` |
+| normal         | `<C-g>`            | **Search** for a **string** and get results live as you type (respects .gitignore) | `:Telescope live_grep` |
+| normal, visual | `<C-Up>`           | Move line(s) up | |
+| normal, visual | `<C-Down>`         | Move line(s) down | |
+| normal, visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc` |
 
 ## Install support for programming languages
 
