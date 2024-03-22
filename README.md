@@ -91,7 +91,7 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 | normal         | `[d`               | Move to the **previous diagnostic** | `:vim.diagnostic.goto_prev` |
 | normal<br>visual | `<C-Up>`           | Move line(s) up | |
 | normal<br>visual | `<C-Down>`         | Move line(s) down | |
-| normal<br>visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc` |
+| normal<br>visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc`<br>`gc` |
 | insert         | `<C-n>`            | Invoke **completion** | `:cmp.complete` |
 
 ## Support for programming languages
