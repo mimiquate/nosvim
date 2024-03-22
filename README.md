@@ -75,15 +75,15 @@ $ git pull
 
 We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 
-| Mode(s)        | Keymap             | Description            | Notes |
-| -----          | ------             | -----                  | ----- |
-| normal         | `<C-n>`            | **Open** or close the **file tree** | `:NvimTreeToggle` |
-| normal         | `<C-p>`            | **Search** for **files** (respecting .gitignore) | `:Telescope find_files` |
-| normal         | `<C-b>`            | **Lists** open **buffers** in current neovim instance | `:Telescope buffers` |
-| normal         | `<C-g>`            | **Search** for a **string** and get results live as you type (respects .gitignore) | `:Telescope live_grep` |
-| normal, visual | `<C-Up>`           | Move line(s) up | |
-| normal, visual | `<C-Down>`         | Move line(s) down | |
-| normal, visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc` |
+| Mode(s)          | Keymap             | Description            | Notes |
+| -----            | ------             | -----                  | ----- |
+| normal           | `<C-n>`            | **Open** or close the **file tree** | `:NvimTreeToggle` |
+| normal           | `<C-p>`            | **Search** for **files** (respecting .gitignore) | `:Telescope find_files` |
+| normal           | `<C-b>`            | **Lists** open **buffers** in current neovim instance | `:Telescope buffers` |
+| normal           | `<C-g>`            | **Search** for a **string** and get results live as you type (respects .gitignore) | `:Telescope live_grep` |
+| normal<br>visual | `<C-Up>`           | Move line(s) up | |
+| normal<br>visual | `<C-Down>`         | Move line(s) down | |
+| normal<br>visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc`<br>`gc` |
 
 ## Install support for programming languages
 

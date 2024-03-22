@@ -14,8 +14,8 @@ return {
     })
 
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<C-b>', builtin.buffers, { desc = "Find buffers" })
-    vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = "Find files" })
-    vim.keymap.set('n', '<C-g>', builtin.live_grep, { desc = "Grep files" })
+    vim.keymap.set('n', '<C-b>', builtin.buffers, { desc = "Lists open buffers in current neovim instance" })
+    vim.keymap.set('n', '<C-p>', builtin.find_files, { desc = "Search for files (respects .gitignore)" })
+    vim.keymap.set('n', '<C-g>', builtin.live_grep, { desc = "Search for a string and get results live as you type (respects .gitignore)" })
   end
 }
