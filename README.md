@@ -9,9 +9,12 @@ A very thin config layer for neovim.
 Provide **minimal** defaults that enhance the native neovim experience significantly without too much
 bloat.
 
-Special care taken to **avoid** potentially **noisy** and **distracting** features. This means intentionally not included
-popular features in other configs like gitsigns blame virtual text like gitsigns, or LSP error/warning diagnostics
-virtual text.
+Intentionally try to **avoid** what could be **noisy** and **distracting** features.
+
+For example:
+
+- Enable LSP diagnostics but only notify errors/warnings in the signcolumn and disable noisy red underline and virtual text.
+- Possible to manually `:Gblame` in buffer, but don't enable gitsigns blame info virtual text.
 
 ### Main features
 
