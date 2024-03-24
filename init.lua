@@ -20,6 +20,12 @@ vim.opt.iskeyword:append('-')
 -- reopening file buffer.
 vim.opt.undofile = true
 
+-- Keymaps
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move cursor to left windows" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move cursor to windows below" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move cursor to windows above" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move cursor to right windows" })
+
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
   vim.cmd("source ~/.nvim.lua")
 end
