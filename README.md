@@ -96,6 +96,10 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 | normal<br>visual | `<C-Down>`         | Move line(s) down | |
 | normal<br>visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc`<br>`gc` |
 | insert           | `<C-n>`            | Invoke **completion** | `:cmp.complete` |
+| normal           | `<C-h>`            | Move cursor to left windows | |
+| normal           | `<C-j>`            | Move cursor to windows below | |
+| normal           | `<C-k>`            | Move cursor to windows above | |
+| normal           | `<C-l>`            | Move cursor right windows | |
 
 ## Support for programming languages
 
