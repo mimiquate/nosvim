@@ -9,14 +9,19 @@ A very thin config layer for neovim.
 Provide **minimal** defaults that enhance the native neovim experience significantly without too much
 bloat.
 
-Special care taken to **avoid** potentially **noisy** and **distracting** features. This means intentionally not included
-popular features in other configs like gitsigns blame virtual text like gitsigns, or LSP error/warning diagnostics
-virtual text.
+Intentionally try to **avoid** what could be **noisy** and **distracting** features.
+
+For example:
+
+- Enable LSP diagnostics but only notify errors/warnings in the signcolumn and disable noisy red underline and virtual text.
+- Possible to manually `:Gblame` in buffer, but don't enable gitsigns blame info virtual text.
 
 ### Main features
 
 - Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- Programming languages support with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Syntax highlighting of any language with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Autocompletions with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- LSP integration with [mason.nvim](https://github.com/williamboman/mason.nvim) and [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - File explorer with [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - Git integration with [vim-fugitive](https://github.com/tpope/vim-fugitive) and [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 - GitHub integration with [vim-rhubarb](https://github.com/tpope/vim-rhubarb)
@@ -75,30 +80,59 @@ $ git pull
 
 We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 
-| Keymap             | Mode(s)        | Description            | Notes |
-| ------             | -----          | -----                  | ----- |
-| `<C-n>`            | normal         | Open/Close File Tree   | Same as `:NvimTreeToggle` |
-| `<C-p>`            | normal         | Find files             | Same as `:Telescope find_files` |
-| `<C-b>`            | normal         | Find buffers           | Same as `:Telescope buffers` |
-| `<C-g>`            | normal         | Grep files             | Same as `:Telescope live_grep` |
-| `K`                | normal, visual | Move line(s) up        | |
-| `J`                | normal, visual | Move line(s) down      | |
-| `<Leader>c<Space>` | normal, visual | Comment/Uncomment code | |
-| `<C-h>`            | normal         | Move cursor to left windows | |
-| `<C-j>`            | normal         | Move cursor to windows below | |
-| `<C-k>`            | normal         | Move cursor to windows above | |
-| `<C-l>`            | normal         | Move cursor right windows | |
+| Mode(s)          | Keymap             | Description            | Notes |
+| -----            | ------             | -----                  | ----- |
+| normal           | `<C-n>`            | **Open** or close the **file tree** | `:NvimTreeToggle` |
+| normal           | `<C-p>`            | **Search** for **files** (respecting .gitignore) | `:Telescope find_files` |
+| normal           | `<C-b>`            | **Lists** open **buffers** in current neovim instance | `:Telescope buffers` |
+| normal           | `<C-g>`            | **Search** for a **string** and get results live as you type (respects .gitignore) | `:Telescope live_grep` |
+| normal           | `gd`               | Go **to** the **definition** of the symbol under the cursor | `:vim.lsp.buf.definition` |
+| normal           | `K`                | Displays **hover information** about the symbol under the cursor in a floating window.<br>Calling the function twice will jump into the floating window. | `:vim.lsp.buf.hover` |
+| normal<br>visual | `<Space>f`         | **Formats** a buffer (or visual selection) using the attached language server clients | `:vim.lsp.buf.format({ async = true })` |
+| normal           | `<Space>e`         | **Show diagnostics** in a floating window | `:vim.diagnostic.open_float` |
+| normal           | `]d`               | Move to the **next diagnostic** | `:vim.diagnostic.goto_next` |
+| normal           | `[d`               | Move to the **previous diagnostic** | `:vim.diagnostic.goto_prev` |
+| normal<br>visual | `<C-Up>`           | Move line(s) up | |
+| normal<br>visual | `<C-Down>`         | Move line(s) down | |
+| normal<br>visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc`<br>`gc` |
+| insert           | `<C-n>`            | Invoke **completion** | `:cmp.complete` |
 
-## Install support for programming languages
+## Support for programming languages
 
-Using nvim-treesitter commands
+### Syntax highlighting
+
+Using nvim-treesitter commands:
 
 ```
 # inside nvim
+
 :TSInstall <language_to_install>
 ```
 
-More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#language-parsers
+More details: https://github.com/nvim-treesitter/nvim-treesitter?tab=readme-ov-file#language-parsers.
+
+### Autocompletion and LSP
+
+Using mason-nvim commands:
+
+```
+# inside nvim
+
+:MasonInstall <language_to_install>
+```
+
+or
+
+```
+# inside nvim
+
+:Mason
+```
+
+to open the interactive mason window.
+
+More details: https://github.com/williamboman/mason.nvim?tab=readme-ov-file#commands.
+
 
 ## Check installation health
 
