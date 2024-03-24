@@ -1,5 +1,4 @@
 require("plugin_manager")
-require("keymaps")
 
 vim.opt.clipboard="unnamedplus"
 
@@ -20,6 +19,14 @@ vim.opt.iskeyword:append('-')
 -- Retain undo history to be able to undo changes even after closing and
 -- reopening file buffer.
 vim.opt.undofile = true
+
+-- Keymaps --
+
+-- Move current line/s under cursor up or down
+vim.keymap.set("n", "J", ":m .+1<CR>==", { desc = "Move current line down" })
+vim.keymap.set("n", "K", ":m .-2<CR>==", { desc = "Move current line up" })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move current line down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move current line up" })
 
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
   vim.cmd("source ~/.nvim.lua")
