@@ -20,6 +20,8 @@ vim.opt.iskeyword:append('-')
 -- reopening file buffer.
 vim.opt.undofile = true
 
+vim.o.scrolloff = 4
+
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
   vim.cmd("source ~/.nvim.lua")
 end
