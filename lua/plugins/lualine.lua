@@ -3,12 +3,15 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
+      component_separators = '',
       disabled_filetypes = {
         'fugitiveblame',
       }
     },
     sections = {
-      lualine_a = {'mode'},
+      lualine_a = {
+        { 'mode', fmt = function(str) return str:sub(1,1) end }
+      },
       lualine_b = {},
       lualine_c = {
         {
@@ -16,8 +19,8 @@ return {
           path = 1
         }
       },
-      lualine_x = {'filetype'},
-      lualine_y = {'branch', 'diff', 'diagnostics'},
+      lualine_x = {'diff', 'branch'},
+      lualine_y = {'diagnostics', 'filetype'},
       lualine_z = {'progress', 'location'}
     },
     extensions = {
