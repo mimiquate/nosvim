@@ -22,6 +22,10 @@ vim.opt.undofile = true
 
 vim.o.scrolloff = 4
 
+-- nerdcommenter mappings
+vim.keymap.set("n", "<leader>c<space>", "gcc", { remap = true, desc = "Comment or uncomment lines" })
+vim.keymap.set("v", "<leader>c<space>", "gc", { remap = true, desc = "Comment or uncomment lines" })
+
 if (vim.fn.filereadable(vim.fs.normalize("~/.nvim.lua")) == 1) then
   vim.cmd("source ~/.nvim.lua")
 end
