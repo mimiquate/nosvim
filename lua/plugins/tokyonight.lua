@@ -1,6 +1,6 @@
 return {
   "folke/tokyonight.nvim",
-  version = "3.x.x",
+  version = "4.x.x",
   lazy = true,
   opts = {
     transparent = true,
