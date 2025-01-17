@@ -11,5 +11,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Will look for module in `/lua/plugins.lua`
-require("lazy").setup("plugins")
+require("lazy").setup({
+  spec = {
+    -- Will look for module in `/lua/plugins.lua`
+    { import = "plugins" },
+  },
+  rocks = { enabled = false }
+})
