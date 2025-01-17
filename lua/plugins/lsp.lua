@@ -2,8 +2,8 @@ return {
   "neovim/nvim-lspconfig",
   version = "1.x.x",
   dependencies = {
-    {"williamboman/mason.nvim", version = "1.x.x"},
-    {"williamboman/mason-lspconfig.nvim", version = "1.x.x"}
+    { "williamboman/mason.nvim",           version = "1.x.x" },
+    { "williamboman/mason-lspconfig.nvim", version = "1.x.x" }
   },
   config = function()
     require("mason").setup()
@@ -23,7 +23,7 @@ return {
           settings = {
             Lua = {
               diagnostics = {
-                globals = {'vim'}
+                globals = { 'vim' }
               }
             }
           }
@@ -49,7 +49,7 @@ return {
 
           if client.server_capabilities.documentFormattingProvider then
             vim.keymap.set(
-              {'n', 'v'},
+              { 'n', 'v' },
               '<space>f',
               function()
                 vim.lsp.buf.format({ async = true })

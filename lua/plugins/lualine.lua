@@ -10,7 +10,7 @@ return {
     },
     sections = {
       lualine_a = {
-        { 'mode', fmt = function(str) return str:sub(1,1) end }
+        { 'mode', fmt = function(str) return str:sub(1, 1) end }
       },
       lualine_b = {},
       lualine_c = {
@@ -19,9 +19,9 @@ return {
           path = 1
         }
       },
-      lualine_x = {'diff', 'branch'},
-      lualine_y = {'diagnostics', 'filetype'},
-      lualine_z = {'progress', 'location'}
+      lualine_x = { 'diff', 'branch' },
+      lualine_y = { 'diagnostics', 'filetype' },
+      lualine_z = { 'progress', 'location' }
     },
     extensions = {
       "nvim-tree"
