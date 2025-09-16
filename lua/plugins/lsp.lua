@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  version = "1.x.x",
+  version = "2.x.x",
   dependencies = {
     { "williamboman/mason.nvim",           version = "1.x.x" },
     { "williamboman/mason-lspconfig.nvim", version = "1.x.x" }
