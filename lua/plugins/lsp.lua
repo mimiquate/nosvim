@@ -2,34 +2,12 @@ return {
   "neovim/nvim-lspconfig",
   version = "2.x.x",
   dependencies = {
-    { "mason-org/mason.nvim",           version = "1.x.x" },
-    { "mason-org/mason-lspconfig.nvim", version = "1.x.x" }
+    { "mason-org/mason.nvim",           version = "2.x.x" },
+    { "mason-org/mason-lspconfig.nvim", version = "2.x.x" }
   },
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup()
-
-    require("mason-lspconfig").setup_handlers({
-      -- The first entry (without a key) will be the default handler
-      -- and will be called for each installed server that doesn't have
-      -- a dedicated handler.
-      function(server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup({})
-      end,
-      -- Next, you can provide a dedicated handler for specific servers.
-      -- For example, a handler override for the `rust_analyzer`:
-      ["lua_ls"] = function()
-        require("lspconfig").lua_ls.setup({
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { 'vim' }
-              }
-            }
-          }
-        })
-      end
-    })
 
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer
