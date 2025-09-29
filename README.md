@@ -31,7 +31,7 @@ For example:
 
 ## Prerequisites
 
-* [Neovim](https://neovim.io/) 0.10+
+* [Neovim](https://neovim.io/) 0.11+
 * tree-sitter-cli
 
 ### Suggested and optional dependencies
