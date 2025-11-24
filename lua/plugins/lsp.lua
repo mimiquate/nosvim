@@ -1,34 +1,13 @@
 return {
   "neovim/nvim-lspconfig",
+  version = "2.x.x",
   dependencies = {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim"
+    { "mason-org/mason.nvim",           version = "2.x.x" },
+    { "mason-org/mason-lspconfig.nvim", version = "2.x.x" }
   },
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup()
-
-    require("mason-lspconfig").setup_handlers({
-      -- The first entry (without a key) will be the default handler
-      -- and will be called for each installed server that doesn't have
-      -- a dedicated handler.
-      function(server_name) -- default handler (optional)
-        require("lspconfig")[server_name].setup({})
-      end,
-      -- Next, you can provide a dedicated handler for specific servers.
-      -- For example, a handler override for the `rust_analyzer`:
-      ["lua_ls"] = function()
-        require("lspconfig").lua_ls.setup({
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = {'vim'}
-              }
-            }
-          }
-        })
-      end
-    })
 
     -- Use LspAttach autocommand to only map the following keys
     -- after the language server attaches to the current buffer
@@ -46,13 +25,9 @@ return {
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
           end
 
-          if client.server_capabilities.hoverProvider then
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-          end
-
           if client.server_capabilities.documentFormattingProvider then
             vim.keymap.set(
-              {'n', 'v'},
+              { 'n', 'v' },
               '<space>f',
               function()
                 vim.lsp.buf.format({ async = true })
@@ -72,8 +47,6 @@ return {
       virtual_text = false
     })
     vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
-    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-    vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 
     -- Configures LSP hover window
     local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview

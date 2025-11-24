@@ -1,5 +1,6 @@
 return {
   "nvim-tree/nvim-tree.lua",
+  version = "1.x.x",
   event = "VeryLazy",
   config = function()
     -- vim.g.loaded_netrw = 1 -- breaks :GBrowse in vim-fugitive, see https://github.com/tpope/vim-fugitive/issues/1010

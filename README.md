@@ -31,7 +31,7 @@ For example:
 
 ## Prerequisites
 
-* [Neovim](https://neovim.io/) 0.9.2+
+* [Neovim](https://neovim.io/) 0.11+
 * tree-sitter-cli
 
 ### Suggested and optional dependencies
@@ -80,6 +80,8 @@ $ git pull
 
 We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 
+On top of all the [nvim default mappings](https://neovim.io/doc/user/vim_diff.html#_default-mappings) we define the follwing:
+
 | Mode(s)          | Keymap             | Description            | Notes |
 | -----            | ------             | -----                  | ----- |
 | normal           | `<C-n>`            | **Open** or close the **file tree** | `:NvimTreeToggle` |
@@ -87,11 +89,8 @@ We don't overwrite \<Leader>. Defaults to the backslash (`\`) character.
 | normal           | `<C-b>`            | **Lists** open **buffers** in current neovim instance | `:Telescope buffers` |
 | normal           | `<C-g>`            | **Search** for a **string** and get results live as you type (respects .gitignore) | `:Telescope live_grep` |
 | normal           | `gd`               | Go **to** the **definition** of the symbol under the cursor | `:vim.lsp.buf.definition` |
-| normal           | `K`                | Displays **hover information** about the symbol under the cursor in a floating window.<br>Calling the function twice will jump into the floating window. | `:vim.lsp.buf.hover` |
 | normal<br>visual | `<Space>f`         | **Formats** a buffer (or visual selection) using the attached language server clients | `:vim.lsp.buf.format({ async = true })` |
 | normal           | `<Space>e`         | **Show diagnostics** in a floating window | `:vim.diagnostic.open_float` |
-| normal           | `]d`               | Move to the **next diagnostic** | `:vim.diagnostic.goto_next` |
-| normal           | `[d`               | Move to the **previous diagnostic** | `:vim.diagnostic.goto_prev` |
 | normal<br>visual | `<C-Up>`           | Move line(s) up | |
 | normal<br>visual | `<C-Down>`         | Move line(s) down | |
 | normal<br>visual | `<Leader>c<Space>` | **Comment** or uncomment lines | `gcc`<br>`gc` |

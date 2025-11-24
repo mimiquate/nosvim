@@ -20,7 +20,13 @@ vim.opt.iskeyword:append('-')
 -- reopening file buffer.
 vim.opt.undofile = true
 
+vim.o.scrolloff = 4
+
 -- Keymaps --
+
+-- nerdcommenter mappings
+vim.keymap.set("n", "<leader>c<space>", "gcc", { remap = true, desc = "Comment or uncomment lines" })
+vim.keymap.set("v", "<leader>c<space>", "gc", { remap = true, desc = "Comment or uncomment lines" })
 
 -- Move current line/s under cursor up or down
 vim.keymap.set("n", "J", ":m .+1<CR>==", { desc = "Move current line down" })
