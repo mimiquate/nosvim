@@ -22,10 +22,13 @@ return {
           local client = vim.lsp.get_client_by_id(args.data.client_id)
 
           if client.server_capabilities.definitionProvider then
+            opts["desc"] = "Go to definition"
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
           end
 
           if client.server_capabilities.documentFormattingProvider then
+            opts["desc"] = "Format buffer"
+
             vim.keymap.set(
               { 'n', 'v' },
               '<space>f',
@@ -46,7 +49,7 @@ return {
       underline = false,
       virtual_text = false
     })
-    vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
+    vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, { desc = "Open line diagnostics (if any)" })
 
     -- Configures LSP hover window
     local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
