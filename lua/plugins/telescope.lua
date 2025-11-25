@@ -6,7 +6,11 @@ return {
   config = function()
     require('telescope').setup({
       pickers = {
+        find_files = {
+          previewer = false
+        },
         buffers = {
+          previewer = false,
           ignore_current_buffer = true,
           sort_mru = true,
         }
