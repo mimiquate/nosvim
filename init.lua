@@ -21,6 +21,7 @@ vim.opt.iskeyword:append('-')
 vim.opt.undofile = true
 
 vim.o.scrolloff = 4
+vim.o.winborder = "rounded"
 
 -- nerdcommenter mappings
 vim.keymap.set("n", "<leader>c<space>", "gcc", { remap = true, desc = "Comment or uncomment lines" })

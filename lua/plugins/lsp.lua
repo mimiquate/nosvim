@@ -57,7 +57,6 @@ return {
       opts = opts or {}
       opts.max_height = opts.max_height or 30
       opts.max_width = opts.max_width or 120
-      opts.border = opts.border or "rounded"
       return orig_util_open_floating_preview(contents, syntax, opts, ...)
     end
   end
