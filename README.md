@@ -20,7 +20,7 @@ For example:
 
 - Find, filter, preview files with [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - Syntax highlighting of any language with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-- Autocompletions with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- Completions with [blink.cmp](https://github.com/saghen/blink.cmp)
 - LSP integration with [mason.nvim](https://github.com/williamboman/mason.nvim) and [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - File explorer with [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - Git integration with [vim-fugitive](https://github.com/tpope/vim-fugitive) and [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
