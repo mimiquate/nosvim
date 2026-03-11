@@ -16,5 +16,8 @@ require("lazy").setup({
     -- Will look for module in `/lua/plugins.lua`
     { import = "plugins" },
   },
-  rocks = { enabled = false }
+  rocks = { enabled = false },
+  ui = {
+    border = vim.o.winborder
+  }
 })
