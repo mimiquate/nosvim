@@ -1,5 +1,6 @@
 -- The below table will be merged with the rest of the plugin specs under `/lua/plugins/*.lua`
-return {
+
+local plugins = {
   {
     "bronson/vim-trailing-whitespace",
     event = "VeryLazy"
@@ -17,5 +18,13 @@ return {
     event = "VeryLazy",
     dependencies = { "tpope/vim-fugitive" }
   },
-  { import = 'custom.plugins' }
 }
+
+if pcall(function() require("custom.plugins") end) then
+  table.insert(
+    plugins,
+    { import = 'custom.plugins' }
+  )
+end
+
+return plugins
