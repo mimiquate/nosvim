@@ -28,4 +28,4 @@ vim.o.scrolloff = 4
 vim.keymap.set("n", "<leader>c<space>", "gcc", { remap = true, desc = "Comment or uncomment lines" })
 vim.keymap.set("v", "<leader>c<space>", "gc", { remap = true, desc = "Comment or uncomment lines" })
 
-require("custom")
+pcall(function() require("custom") end)
