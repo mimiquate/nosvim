@@ -1,5 +1,0 @@
-return {
-  {
-    -- plugin spec here
-  },
-}
