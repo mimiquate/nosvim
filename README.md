@@ -142,16 +142,13 @@ More details: https://github.com/williamboman/mason.nvim?tab=readme-ov-file#comm
 
 ## Extra customizations
 
-Extra customizations and/or overrides can be placed under `~/.nvim.lua`, which will be loaded
+Extra customizations and/or overrides can be placed under `~/.config/nvim/lua/custom/init.lua`, which will be loaded
 automatically if present.
 
 ### Plugins
 
-To add a new plugin, you need to add a new file under `~/.config/nvim/lua/plugins/` according to
-lazy.nvim plugins spec specification.
-
-See other existing files under that directory for examples on how to configure.
-
+To add a new plugin, you need to add a spec under the spec table in file under `~/.config/nvim/lua/customs/plugins/init.lua`
+according to lazy.nvim plugins spec specification.
 
 ## License
 
