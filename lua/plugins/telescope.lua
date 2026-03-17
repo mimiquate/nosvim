@@ -5,6 +5,14 @@ return {
   event = "VeryLazy",
   config = function()
     require('telescope').setup({
+      defaults = {
+        mappings = {
+          i = {
+            ["<C-Down>"] = require('telescope.actions').cycle_history_next,
+            ["<C-Up>"] = require('telescope.actions').cycle_history_prev,
+          },
+        }
+      },
       pickers = {
         find_files = {
           previewer = false
